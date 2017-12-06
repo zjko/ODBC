@@ -4,8 +4,8 @@
 #include <sql.h>
 struct DBAccount {
 	SQLCHAR * DBSOURCE = (SQLCHAR *)"MySQLSource";
-	SQLCHAR * USERNAME = (SQLCHAR *)"SCM";
-	SQLCHAR * PASSWORD = (SQLCHAR *)"KZJ+185.";
+	SQLCHAR * USERNAME = (SQLCHAR *)"username";
+	SQLCHAR * PASSWORD = (SQLCHAR *)"password";
 }DBAccount;
 
 
