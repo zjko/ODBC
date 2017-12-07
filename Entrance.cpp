@@ -1,9 +1,9 @@
 /*
-	ÓÃÃæÏò¶ÔÏó±à³ÌµÄCÓïÑÔ²Ù×÷ODBC
-	×÷Õß£ºZJKo
-	²©¿Í£ºhttp://ZJKo.vip
-	´úÂë£º
-	±¾°¸ÀıÊ¹ÓÃÊı¾İ¿âÎªSQL Server 2017
+	ç”¨é¢å‘å¯¹è±¡ç¼–ç¨‹çš„Cè¯­è¨€æ“ä½œODBC
+	ä½œè€…ï¼šZJKo
+	åšå®¢ï¼šhttp://ZJKo.vip
+	ä»£ç ï¼šhttps://github.com/zjko/ODBC.git
+	æœ¬æ¡ˆä¾‹ä½¿ç”¨æ•°æ®åº“ä¸ºSQL Server 2017
 */
 
 #include <stdio.h>
@@ -18,8 +18,8 @@
 
 struct Student stu = {
 	(SQLCHAR)"201215130",
-	(SQLCHAR)"Íõ´óÅÚ",
-	(SQLCHAR)"ÄĞ",
+	(SQLCHAR)"ç‹å¤§ç‚®",
+	(SQLCHAR)"ç”·",
 	(SQLSMALLINT)22,
 	(SQLCHAR)"MA",
 };
@@ -28,14 +28,14 @@ struct Student stu = {
 void OperatDB() {
 	
 	while(1){
-		puts("ODBCÊı¾İ¿â²Ù×÷°¸Àı");
-		puts("1¡¢ÏÔÊ¾ËùÓĞÑ§Éú");
-		puts("2¡¢¸ù¾İÑ§ºÅ²éÕÒ");
-		puts("3¡¢¸ù¾İÑ§ºÅĞŞ¸Ä");
-		puts("4¡¢¸ù¾İÑ§ºÅÉ¾³ı");
-		puts("5¡¢²åÈëÑ§Éú¼ÇÂ¼");
-		puts("0¡¢ÍË³ö³ÌĞò");
-		//ÎªÁË²âÊÔ·½±ã£¨²»ĞèÒªÊäÈë£©Ã»ÓĞÌá¹©ÊäÈë·½Ê½£¬ÈôĞèÒªÇë×ÔĞĞĞŞ¸ÄÏÂÁĞ´úÂë
+		puts("ODBCæ•°æ®åº“æ“ä½œæ¡ˆä¾‹");
+		puts("1ã€æ˜¾ç¤ºæ‰€æœ‰å­¦ç”Ÿ");
+		puts("2ã€æ ¹æ®å­¦å·æŸ¥æ‰¾");
+		puts("3ã€æ ¹æ®å­¦å·ä¿®æ”¹");
+		puts("4ã€æ ¹æ®å­¦å·åˆ é™¤");
+		puts("5ã€æ’å…¥å­¦ç”Ÿè®°å½•");
+		puts("0ã€é€€å‡ºç¨‹åº");
+		//ä¸ºäº†æµ‹è¯•æ–¹ä¾¿ï¼ˆä¸éœ€è¦è¾“å…¥ï¼‰æ²¡æœ‰æä¾›è¾“å…¥æ–¹å¼ï¼Œè‹¥éœ€è¦è¯·è‡ªè¡Œä¿®æ”¹ä¸‹åˆ—ä»£ç 
 		switch (getch()) {
 			case '1':StudentDao.getAllStudent(); break;
 			case '2':StudentDao.getStudent("201215122"); break;
@@ -43,7 +43,7 @@ void OperatDB() {
 			case '4':StudentDao.deleteStudent("201215130"); break;
 			case '5':StudentDao.insertStudent(stu); break;
 			case '0':return;
-			default: puts("ÎŞĞ§Ö¸Áî");
+			default: puts("æ— æ•ˆæŒ‡ä»¤");
 		}
 		system("pause");
 		system("cls");
@@ -51,7 +51,7 @@ void OperatDB() {
 }
 
 int main() {
-	DBBean.getConnection();		//´ò¿ªÊı¾İ¿âÁ¬½Ó
-	OperatDB();						//²Ù×÷Êı¾İ¿â
-	DBBean.closeConnection();	//¹Ø±ÕÊı¾İ¿âÁ¬½Ó
+	DBBean.getConnection();		//æ‰“å¼€æ•°æ®åº“è¿æ¥
+	OperatDB();						//æ“ä½œæ•°æ®åº“
+	DBBean.closeConnection();	//å…³é—­æ•°æ®åº“è¿æ¥
 }
