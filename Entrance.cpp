@@ -52,6 +52,6 @@ void OperatDB() {
 
 int main() {
 	DBBean.getConnection();		//打开数据库连接
-	OperatDB();						//操作数据库
+	OperatDB();			//操作数据库
 	DBBean.closeConnection();	//关闭数据库连接
 }
